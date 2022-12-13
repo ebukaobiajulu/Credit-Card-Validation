@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 15px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./images/bg-main-desktop.png" alt="" />
+      <div class="card_logo"><img src="./images/card-logo.svg" alt="" /></div>
+    </header>
+    <!-- <div class="card-information">
+      <h2 id="card-number"></h2>
+      <div class="card-text">
+        <p id="card-name"></p>
+        <p id="card-expiry"></p>
+      </div>
+    </div> -->
+    <h3 id="cvc-number">567</h3>
+    <div class="container">
+      <section class="credit-card">
+        <div class="front-card">
+          <div class="front-card-img-container">
+            <img src="./images/bg-card-front.png" alt="" />
+            <div class="card-information">
+              <h2 id="card-number"></h2>
+              <div class="card-text">
+                <p id="card-name"></p>
+                <p id="card-expiry"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back-card">
+          <img src="./images/bg-card-back.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Form section -->
+      <section class="form-section">
+        <div class="form-control">
+          <form action="results.html" method="post">
+            <div class="cardholder_name padding">
+              <label for="name">cardholder name</label>
+              <input
+                type="text"
+                id="cardholderName"
+                maxlength="15"
+                class="input-space"
+                placeholder="e.g  Obiajulu Ebuka "
+              />
+            </div>
+
+            <div class="cardholder_number">
+              <label for="name">card number</label>
+              <input
+                type="number"
+                pattern="/d*"
+                inputmode="numeric"
+                id="number"
+                class="input-space"
+                min="1"
+                max="16"
+                placeholder="e.g 1234 5678 9123 0000 "
+              />
+            </div>
+            <div class="expiry-date_cvc">
+              <div class="expiry-date">
+                <label for="">Exp. Date (MM/YY)</label>
+                <div class="flex">
+                  <input
+                    type="number"
+                    name="month"
+                    id="month"
+                    class="input-space-month"
+                    placeholder="MM"
+                    min="1"
+                    max="12"
+                    maxlength="2"
+                    required
+                    
+                  />
+                  <input
+                    type="text"
+                    name="year"
+                    id="year"
+                    class="input-space-month"
+                    placeholder="YY"
+                    maxlength="4"
+                  />
+                </div>
+              </div>
+              <div class="cvc">
+                <label for="">CVC</label>
+                <input
+                  type="text"
+                  name="cvc"
+                  max="3"
+                  id="cvc"
+                  maxlength="3"
+                  class="input-space"
+                  placeholder="e.g. 123"
+                />
+              </div>
+            </div>
+            <button type="submit" class="submit-btn" id="submit-btn">
+              Confirm
+            </button>
+          </form>
+        </div>
+
+        <!-- Thank you!
+        We've added your card details
+        Continue -->
+      </section>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
