@@ -19,7 +19,7 @@
 window.onload = function () {
   document.getElementById("card-number").innerHTML = "0000 0000 0000 0000";
   document.getElementById("cvc-number").innerHTML = "537";
-  document.getElementById("card-name").innerHTML = "Obiajulu Books";
+  document.getElementById("card-name").innerHTML = "Obiajulu Ebuka";
   document.getElementById("card-expiry").innerHTML = "05/25";
 };
 
